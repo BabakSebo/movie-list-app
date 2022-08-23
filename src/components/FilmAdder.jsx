@@ -19,7 +19,7 @@ export default function FilmAdder({ addFilm }) {
 
   return (
     <>
-      <Container>Add a Movie:</Container>
+      <Container className="text-center">Add a Movie:</Container>
       <Form onSubmit={handleSubmit}>
         <Row>
           <Col>

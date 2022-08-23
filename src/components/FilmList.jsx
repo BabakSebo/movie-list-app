@@ -39,7 +39,7 @@ export default function FilmList() {
   const updateWatched = (filmToUpdate) => {
     const updatedFilms = films.map((film) => {
       if (film === filmToUpdate) {
-        return { ...films, watched: !film.watched };
+        return { ...film, watched: !film.watched };
       } else {
         return film;
       }
@@ -56,7 +56,7 @@ export default function FilmList() {
   return (
     <>
       <FilmAdder addFilm={addFilm} />
-      <ul>
+      <div>
         {films.map((film) => {
           return (
             <FilmCard
@@ -66,7 +66,7 @@ export default function FilmList() {
             />
           );
         })}
-      </ul>
+      </div>
     </>
   );
 }
